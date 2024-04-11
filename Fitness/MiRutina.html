@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi rutina</title>
+    <link rel="stylesheet" href="MiRutina.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div>
+        <a href="Fitness.html"
+          ><img src="Recursos/Imagenes/Logo.png" class="logo" alt="Logo página"
+        /></a>
+      </div>
+      <nav class="menuNav">
+        <ul>
+          <li>
+            <a href="Rutinas.html">Rutinas</a>
+            <ul>
+              <li>
+                <a href="Rutinas.html">Pesas</a>
+              </li>
+              <li><a href="Rutinas.html">Ejercicio Aeróbico</a></li>
+              <li><a href="Rutinas.html">Yoga</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Productos.html">¿Qué quieres?</a>
+            <ul>
+              <li>
+                <a href="Smartphone.html">Perder peso</a>
+              </li>
+              <li><a href="Tablet.html">Muscular</a></li>
+              <li>
+                <a href="Accesorios.html">Quitar estrés</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="MiRutina.html">Mis Rutinas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h2>Mi Rutina</h2>
+    <div class="container">
+      <div class="timer-display">00 : 00 : 00 : 000</div>
+      <div class="buttons">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+      </div>
+    </div>
+    <div id="tablaRutina">
+      <h3>Añade un ejercicio</h3>
+      <form id="formularioTabla">
+        <label for="dia">Día</label>
+        <input
+          type="number"
+          name="dia"
+          id="dia"
+          min="0"
+          required
+          placeholder="Añade el día de entrenamiento"
+        />
+        <label for="ejercicio">Tipo de ejercicio</label>
+        <input
+          type="text"
+          name="ejercicio"
+          id="ejercicio"
+          required
+          placeholder="Añade el tipo de ejercicio"
+        />
+        <label for="duracion">Duración</label>
+        <input
+          type="number"
+          name="duracion"
+          id="duracion"
+          min="0"
+          required
+          placeholder="Añade la duración aproximada del ejercicio"
+        />
+        <label for="series">Series</label>
+        <input
+          type="number"
+          name="series"
+          id="series"
+          min="0"
+          required
+          placeholder="Añade el número de Series"
+        />
+        <label for="repeticiones">Repeticiones</label>
+        <input
+          type="number"
+          name="repeticiones"
+          id="repeticiones"
+          min="0"
+          required
+          placeholder="Añade el número de repeticiones"
+        />
+        <label for="peso">Peso</label>
+        <input
+          type="number"
+          name="peso"
+          id="peso"
+          min="0"
+          required
+          placeholder="Añade el peso"
+        />
+        <button id="añadirEjercicio" type="button">Añadir Entrenamiento</button>
+      </form>
+      <table id="tablaMiRutina">
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Ejercicio</th>
+            <th>Duración</th>
+            <th>Peso</th>
+            <th>Series</th>
+            <th>Repeticiones</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+    </div>
+    <script src="miRutina.js"></script>
+  </body>
+</html>

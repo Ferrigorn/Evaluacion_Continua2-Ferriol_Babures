@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponte en forma</title>
+    <link rel="stylesheet" href="Fitness.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div>
+        <img src="Recursos/Imagenes/Logo.png" class="logo" alt="Logo página" />
+      </div>
+      <nav class="menuNav">
+        <ul>
+          <li>
+            <a href="Rutinas.html">Rutinas</a>
+            <ul>
+              <li>
+                <a href="Rutinas.html">Pesas</a>
+              </li>
+              <li><a href="Rutinas.html">Ejercicio Aeróbico</a></li>
+              <li><a href="Rutinas.html">Yoga</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Productos.html">¿Qué quieres?</a>
+            <ul>
+              <li>
+                <a href="Smartphone.html">Perder peso</a>
+              </li>
+              <li><a href="Tablet.html">Muscular</a></li>
+              <li>
+                <a href="Accesorios.html">Quitar estrés</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="MiRutina.html">Mis Rutinas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--Main-->
+    <div id="main">
+      <!--Contenidor Objetivos-->
+      <div id="objetivos">
+        <h2>¿Cuáles són tus objetivos?</h2>
+        <h3>Tenemos un plan de entrenamiento para cada uno</h3>
+        <h3>
+          Elige un objetivo y te mostraremos un plan para que consigas
+          realizarlo
+        </h3>
+        <form>
+          Escoge un objetivo :
+          <!--Select con sus opciones-->
+          <select id="select1" onchange="objetivoFitness()">
+            <!--El valor de l'opció serà el què farem servir per mostrar la selecció de l'usuari-->
+            <option value="">Objetivo</option>
+            <option value="Adelgazar">Perder peso</option>
+            <option value="Muscular">Muscular</option>
+            <option value="Desestresarse">Quitar estrés</option>
+            <option value="MindFullness">MindFullnes</option>
+          </select>
+
+          Has escogido:
+          <!--Aquí es mostrarà el valor del què hagi escollit l'usuari-->
+          <input type="text" id="objetivoSelect" />
+          <!--Contenidor per la imatge del què esculli l'usuari, la imatge canviarà segons el "case" del Switch que hem definit a JS-->
+          <div id="imgContainer"><img src="" id="imgPeso" /></div>
+        </form>
+      </div>
+      <div id="rutinas">
+        <h2>Rutinas para mejorar tu estado físico y mental</h2>
+        <h4>Tenemos miles de rutinas para cumplir tus objetivos</h4>
+        <h4>
+          Si no encuentras lo que buscas, puedes crearte tu propia rutina💪
+        </h4>
+        <a href="/Fitness/Rutinas.html"><button>Saber más</button></a>
+      </div>
+    </div>
+    <!--Footer-->
+    <!-- <footer>
+      <div class="listafooter">
+        <ul>
+          <h3 class="titulofooter">Empresa</h3>
+          <li>
+            <a href="Quienes_Somos.html">¿Quienes somos?</a>
+          </li>
+          <li>Política de privacidad</li>
+          <li>Cookies</li>
+        </ul>
+      </div>
+      <div class="listafooter">
+        <ul>
+          <h3 class="titulofooter">
+            <a href="Quienes_Somos.html">Contacto</a>
+          </h3>
+          <li>
+            <a href="Quienes_Somos.html">📧 Email</a>
+          </li>
+          <li>
+            <a href="Quienes_Somos.html">📞 Teléfono</a>
+          </li>
+          <li>
+            <img class="icono" src="Recursos/instagram.png" />
+            <a href="Quienes_Somos.html">Instagram</a>
+          </li>
+          <li>
+            <img class="icono" src="Recursos/linkedin.png" />
+            <a href="Quienes_Somos.html">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <h2>
+          <a href="Landing_Page.html"> ©️2024 Instafit </a>
+          <h3>Todos los derechos reservados</h3>
+        </h2>
+      </div>
+    </footer> -->
+    <script src="app.js"></script>
+    <!--Crear rutinas de ejercicio personalizadas, seleccionando ejercicios de una lista predefinida o añadiendo ejercicios personalizados.
+Establecer objetivos de entrenamiento, como perder peso, aumentar la fuerza o mejorar la resistencia cardiovascular.
+Realizar un seguimiento del progreso de su entrenamiento, registrando la duración, la intensidad y el rendimiento en cada sesión de ejercicio.
+Mostrar información detallada sobre los ejercicios, incluyendo instrucciones de ejecución, músculos trabajados y equipo necesario.
+Implementar controles de entrenamiento, como iniciar y detener sesiones de ejercicio (Botó per iniciar sessió i pausar-la amb un contador), ajustar la intensidad o el peso, y registrar el número de repeticiones y series.
+Integrar componentes multimedia, como imágenes y videos de demostración de ejercicios, para ayudar a los usuarios a realizar correctamente cada movimiento.
+Gestionar errores de forma adecuada, proporcionando consejos y sugerencias para corregir la técnica de ejercicio, evitar lesiones y maximizar los resultados del entrenamiento. Gestiona también los errores producidos por la propia página,  por ejemplo un link perdido. (Hay que añadir un link perdido para poder  mostrar el error).-->
+  </body>
+</html>

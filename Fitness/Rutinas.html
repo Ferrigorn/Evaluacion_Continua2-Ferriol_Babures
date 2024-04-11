@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponte en forma</title>
+    <link rel="stylesheet" href="Rutinas.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div>
+        <a href="Fitness.html"
+          ><img src="Recursos/Imagenes/Logo.png" class="logo" alt="Logo página"
+        /></a>
+      </div>
+      <nav class="menuNav">
+        <ul>
+          <li>
+            <a href="Rutinas.html">Rutinas</a>
+            <ul>
+              <li>
+                <a href="Rutinas.html">Pesas</a>
+              </li>
+              <li><a href="Rutinas.html">Ejercicio Aeróbico</a></li>
+              <li><a href="Rutinas.html">Yoga</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Productos.html">¿Qué quieres?</a>
+            <ul>
+              <li>
+                <a href="Smartphone.html">Perder peso</a>
+              </li>
+              <li><a href="Tablet.html">Muscular</a></li>
+              <li>
+                <a href="Accesorios.html">Quitar estrés</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="MiRutina.html">Mis Rutinas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--Main-->
+    <div id="main">
+      <h2>Rutinas</h2>
+      <h3>
+        Selecciona una de nuestras rutinas o
+        <a href="#creaTuRutina">crea la tuya</a> propia
+      </h3>
+      <div id="containerMusculacion">
+        <!--Boton para pintar la tabla de musculacion (a traves de su funcion en js)-->
+        <button id="muscul" onclick="construirTablaMusculacion()">
+          Musculacion
+        </button>
+        <!--Div donde inyectaremos la tabla-->
+        <div id="tablaMusculacion"></div>
+        <div id="containerVideo">
+          <video id="videoPlayer" width="640" height="300">
+            <source
+              src="/Fitness/Recursos/Videos/Best Bicep Exercises You Should Be Doing (Dumbbell Only).mp4"
+              type="video/mp4"
+            />
+          </video>
+          <br />
+          <div id="controles">
+            <button onclick="playPause()">⏯️</button>
+            <button onclick="stop()">⏹️</button>
+            <button onclick="skip(-10)">⏪ 10s</button>
+            <button onclick="skip(10)">⏩ 10s</button>
+            <button onclick="mute()">🔇</button>
+          </div>
+        </div>
+      </div>
+      <div id="containerAerobico">
+        <!--Boton para pintar la tabla aerobica (a traves de su funcion)-->
+        <button id="aerobic" onclick="construirTablaAerobico()">
+          Aeróbico
+        </button>
+        <!--Div donde inyectaremos la tabla -->
+        <div id="tablaAerobico"></div>
+        <div id="containerVideo">
+          <video id="videoPlayerAero" width="640" height="300">
+            <source
+              src="/Fitness/Recursos/Videos/Ejercicios Aeróbicos.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <br />
+          <div id="controlesAero">
+            <button onclick="playPauseAero()">⏯️</button>
+            <button onclick="stopAero()">⏹️</button>
+            <button onclick="skipAero(-10)">⏪ 10s</button>
+            <button onclick="skipAero(10)">⏩ 10s</button>
+            <button onclick="muteAero()">🔇</button>
+          </div>
+        </div>
+      </div>
+      <div id="containerYoga">
+        <button id="yoga">Yoga</button>
+        <div id="tablaYoga"></div>
+      </div>
+      <div id="containerMindfullness">
+        <button id="mindfullness">MindFullness</button>
+        <div id="tablaMindfullness"></div>
+      </div>
+      <!--Crear formulari per la rutina de l'usuari, aquest formulari que s'introdueixi en una taula. Aplicar la gestió d'errors aquí també(que pes o minuts siguin numeros majors (>) que 0)-->
+      <div id="creaTuRutina">
+        <h3>Crea tu propia rutina</h3>
+        <form>
+          <label for="ejercicio">Tipo de ejercicio</label>
+          <input type="text" name="ejercicio" id="ejercicio" />
+          <label for="duracion">Duración</label>
+          <input type="number" name="duracion" id="duracion" />
+          <label for="series">Series</label>
+          <input type="number" name="series" id="series" />
+          <label for="repeticiones">Repeticiones</label>
+          <input type="number" name="repeticiones" id="repeticiones" />
+          <label for="peso">Peso</label>
+          <input type="number" name="peso" id="peso" />
+          <button id="crearMiTabla">Crear Mi Tabla</button>
+        </form>
+        <div id="miTabla"></div>
+      </div>
+    </div>
+    <!--Footer-->
+    <footer>
+      <div class="listafooter">
+        <ul>
+          <h3 class="titulofooter">Empresa</h3>
+          <li>
+            <a href="Quienes_Somos.html">¿Quienes somos?</a>
+          </li>
+          <li>Política de privacidad</li>
+          <li>Cookies</li>
+        </ul>
+      </div>
+      <div class="listafooter">
+        <ul>
+          <h3 class="titulofooter">
+            <a href="Quienes_Somos.html">Contacto</a>
+          </h3>
+          <li>
+            <a href="Quienes_Somos.html">📧 Email</a>
+          </li>
+          <li>
+            <a href="Quienes_Somos.html">📞 Teléfono</a>
+          </li>
+          <li>
+            <img class="icono" src="Recursos/instagram.png" />
+            <a href="Quienes_Somos.html">Instagram</a>
+          </li>
+          <li>
+            <img class="icono" src="Recursos/linkedin.png" />
+            <a href="Quienes_Somos.html">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <h2>
+          <a href="Landing_Page.html"> ©️2024 Instafit </a>
+          <h3>Todos los derechos reservados</h3>
+        </h2>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

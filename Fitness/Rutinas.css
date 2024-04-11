@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #023047a2;
+  border-bottom: thin solid #023047;
+}
+.logo {
+  width: 15vw;
+  height: 18vh;
+}
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: oblique;
+  color: #120f28;
+}
+.menuNav {
+  height: 20vh;
+  width: 50vw;
+  display: flex;
+  padding-right: 5px;
+  justify-content: center;
+}
+.menuNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1px;
+  max-height: 18vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* items del menu */
+
+.menuNav ul li {
+  background-color: #023047a2;
+}
+
+/* enlaces del menuNav */
+
+.menuNav ul a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* items del menuNav */
+
+.menuNav ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* efecto al pasar el ratón por los items del menuNav */
+
+.menuNav ul li:hover {
+  background: #5b78a7;
+}
+/* menu desplegable */
+
+.menuNav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #eee;
+  padding: 0;
+}
+
+/* items del menu desplegable */
+
+.menuNav ul ul li {
+  float: none;
+  width: 150px;
+}
+
+/* enlaces de los items del menu desplegable */
+
+.menuNav ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+.menuNav ul li:hover > ul {
+  display: block;
+}
+
+/*Main*/
+#main {
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#containerMusculacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+#containerAerobico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+#muscul,
+#aerobic,
+#yoga,
+#mindfullness {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)),
+    url("/Fitness/Recursos/Imagenes/perderpeso_big.png");
+  background-size: cover;
+  text-shadow: 2px 2px 4px black;
+  font-size: medium;
+  color: antiquewhite;
+}
+table {
+  width: 50vw;
+  height: 50vh;
+  border-spacing: 0;
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  height: 18vh;
+  background-color: #023047a2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* position: fixed; */
+}
+.listafooter {
+  height: 14vh;
+}
+.icono {
+  width: 20px;
+  height: 20px;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  flex-direction: column;
+  justify-content: flex-end;
+}
